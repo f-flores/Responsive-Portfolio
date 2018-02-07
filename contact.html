@@ -14,46 +14,50 @@
   <header>
     <h1>Fabian Flores</h1>
     <nav>
-      <a href="index.html">
-        About
-      </a>&nbsp; | &nbsp; 
-      <a href="portfolio.html">
-        Portfolio
-      </a>&nbsp; | &nbsp;
-      <a href="contact.html">
-        Contact
-      </a>
+      <a href="index.html">About</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
   <div class="clearfix content main_content">
     <section class="main_box">
       <h2>Contact</h2>
-      <hr>
-        <strong>Name</strong>
-        <input type="text" name="name" placeholder="John Smith" maxlength="60">
+      <form id="contact-form">
+        <ul>
+          <li>
+            <label for="name">Name</label>
+            <input type="text" name="name" placeholder="John Smith" required="required">
+          </li>
 
-        <strong>Email</strong>
-        <input type="email" name="email" placeholder="example@gmail.com" maxlength="60"><br>
+          <li>
+            <label for="email">Email</label>
+            <input type="email" name="email" placeholder="example@gmail.com" required="required">
+          </li>
         
-        <strong>Message</strong>
-        <textarea maxlength="600"></textarea>
+          <li>
+            <label for="message">Message</label>
+            <textarea name="message" required="required"maxlength="600"></textarea>
+          </li>
+      
+        </ul>
+      </form>
         
         <button type="button" class="button">Submit</button>
+      </form>
     </section>
     <aside class="main_box">
         <section id="media_links">
           <h3>Connect With Me</h3>
-          <hr>
             <a href="https://github.com/f-flores" target="_blank">
-              <img alt="Github Logo" src="assets/images/github_logo.png" width="50" height="50">
+              <img alt="Github Logo" src="assets/images/github-128.png">
             </a>
 
             <a href="https://www.linkedin.com/in/francisco-f-flores/" target="_blank">
-              <img alt="LinkedIn Logo" src="assets/images/linkedin_logo.png" width="50" height="50">
+              <img alt="LinkedIn Logo" src="assets/images/linkedin-128.png">
             </a>
 
             <a href="https://stackoverflow.com/users/9150518/f-flores" target="_blank">
-              <img alt="StackOverflow Logo" src="assets/images/stackoverflow_logo.png" width="50" height="50">
+              <img alt="StackOverflow Logo" src="assets/images/stackoverflow-128.png">
             </a>
         </section>
     </aside>
