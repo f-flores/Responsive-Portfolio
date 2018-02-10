@@ -1,0 +1,273 @@
+/* stylesheet file*/
+
+// brand values
+$brand-font-color:#777777;
+$brand-bg-color:#ffffff;
+$brand-footer-bg-color: #666666;
+$brand-border-color: #cccccc;
+$brand-color: #4aaaa5;
+$brand-font-stack: Arial, "Helvetica Neue", Helvetica, sans-serif;
+$brand-font-header: Georgia, Times, "Times New Roman", serif;
+$brand-header-height: 15%;
+// $brand-logo-height: 50%;
+
+// size values depending on media
+// desktop (dsk) sizes
+$dsk-size: 980;
+$dsk-content-size: 960;
+$dsk-mainbox-size: 650;
+$dsk-h1-rm: 400; /* left margin */
+$px-dsk-size: $dsk-size * 1px;
+$px-dsk-h1-rm: $dsk-h1-rm * 1px;
+$px-dsk-content: $dsk-content-size * 1px;
+$px-dsk-mainbox: $dsk-mainbox-size * 1px;
+
+* {
+  box-sizing: border-box;
+}
+
+body 
+{
+  background-image: url("../images/circles-light.png");
+  font-family: $brand-font-stack;
+  margin: 0;
+
+  header {
+    background-color: $brand-bg-color;
+    border-style: solid;
+    border-width: 0px 0px 2px 0px;
+    border-color: $brand-border-color;
+    /* height: $brand-header-height; */
+    h1 {
+      width: 285px;
+      font-family: $brand-font-header;
+      font-size: 2em;
+      font-weight: bold;
+      float: left;
+      color: white;
+      background-color: $brand-color;
+      margin: 0px $px-dsk-h1-rm 0px 90px;
+      padding: 31px 18px 31px 30px;
+    }
+    nav a {
+      display: inline-block;
+      padding-left: 15px;
+      margin: 40px 10px 40px 15px;
+      line-height: 18px;
+      color: $brand-font-color;
+      text-decoration: none;
+      border-left: 1px solid $brand-border-color;
+    }
+    nav a:first-child {
+      border-left: 0 none;
+    }
+  }
+
+  p {
+    text-align: justify;
+  }
+
+
+  /**********************************************************
+   * css class definitions
+   */
+  .content {
+    padding: 0;
+  }
+
+  /* "clearfix" hack to neatly align block elements */
+ .clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+    /* styles 960 main content box */
+ .main-content {
+  box-sizing: border-box;
+  margin-left: 100px;
+  width: $px-dsk-content;
+  padding: 20px 0px 5px 0px;
+  margin-bottom: 5px;
+  line-height: 1.75;
+}
+
+ /* styles left content box */
+ .main-box {
+  box-sizing: border-box;
+  width: $px-dsk-mainbox;
+  background-color: $brand-bg-color;
+  border-style: solid;
+  border-width: 2px 2px 2px 2px;
+  border-color: $brand-border-color;
+  padding: 5px 10px;
+  img {
+    width: 210px;
+    height: 290px;
+    float: left;
+    margin: 0px 10px 10px 5px;
+  }
+ }
+ .wrapper {
+ // max-width: 960px; /* 20px smaller, to fit the paddings on the sides */
+/*   padding-right: 10px;
+  padding-left: 10px; */
+  padding: 0;
+
+}
+
+.custom-footer {
+  background-color: $brand-footer-bg-color;
+  border-color: $brand-color;
+  border-style: solid;
+  color: white;
+  border-width: 3px 0px 0px 0px;
+  height: 80px;
+  p
+  {
+    text-align: center;
+    font-size: 80%;
+    line-height: 1;
+    padding: 25px;
+    margin: 0;
+  }
+}
+ 
+  /**********************************************************
+   * css id definitions
+   */
+  //#main-content,
+  //#sidebar {
+    /* Box-model */
+  //  width: 100%;
+   // float: none;
+  //  padding: 30px;
+  //  margin: 30px 0;
+ // }
+}
+//-------------------------------------------------------------
+//
+// $px-dsk-size (980px) and larger is default above
+//
+@media only screen and (min-width: $px-dsk-size) {
+
+}
+
+@media only screen and (min-width: 680px) {
+  body {
+      background-color: $brand-footer-bg-color;
+  }
+  .main-content {
+    width: 400px;
+  }
+  .main-box {
+    width: 300px;
+    img {
+      width: 50%;
+      height: 60%;
+      float: left;
+      margin: 1% 1%;
+    }
+  }
+}
+
+
+
+
+
+ /* background-image: url("../images/circles-light.png");
+  font-family: $brand-font-stack;
+  header 
+  {
+    border-style: solid;
+    border-width: 0px 0px 2px 0px;
+    border-color: $brand-border-color;
+    height: $brand-header-height;
+  }
+  h1,h2,h3,h4,h5,h6
+  {
+    font-family: $brand-font-header;
+  }
+  h2, h3 {
+    box-sizing: border-box;
+    width: 100%;
+    height: 7%;
+    padding: 0.5%; 
+    border-style: solid;
+    border-color: $brand-border-color;   
+    border-width: 0 0 2px 0;
+  }
+  p 
+  {
+    text-align: justify;
+    line-height: 1.75;
+    margin: 0 0 2px 0;
+  }
+  footer 
+  {
+    border: none;
+  }
+  .brand-custom 
+  {
+    background-color: $brand-header-bg-color;
+    padding: 0;
+  }
+  .brand-logo 
+  {
+    font-family: $brand-font-header;
+    font-size: 200%;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    background: $brand-color;
+    margin: 0;
+    padding: 2% 2%;
+  }
+  .row-spacer 
+  {
+    margin: 20px 0;
+  }
+  .card-body h2 
+  {
+      font-size: 1.5em;
+      font-weight: bold;
+  }
+  .card-body h2,h3,h4,h5,h6 
+  {
+    color: $brand-color;
+    line-height: 2;
+    font-family: 'Georgia', Times, Times New Roman, serif;
+   }
+   .custom-footer {
+      background-color: $brand-footer-bg-color;
+      border-color: $brand-color;
+      border-style: solid;
+      color: white;
+      border-width: 3px 0px 0px 0px;
+      height: 80px;
+      p
+      {
+        text-align: center;
+        font-size: 80%;
+        line-height: 1;
+        padding: 25px;
+        margin: 0;
+      }
+    }
+    .caption-vspacer {
+      top: 60%;
+    } */
+    /* caption_text styles the "text over image" caption on top of each portfolio image */
+    /*
+  .caption-text {
+      color: $brand-color;
+      font-weight: bold;
+      text-shadow: 1px 1px black;
+  }
+    #media_links {
+      position: relative;
+      left: 20px;
+      width: 200px;
+      background-color: #ffffff;
+    } */
+
