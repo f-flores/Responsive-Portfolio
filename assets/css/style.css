@@ -6,13 +6,10 @@
 body {
   background-image: url("../images/circles-light.png");
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  margin-top: 0px;
+  margin: 0px 10px 0px 10px;
   padding-top: 0px;
   /* default padding for columns */
   /* outline when hovering over an image that is intended to be a link */
-  /**********************************************************
-  * css class definitions
-  */
   /* "clearfix" hack to neatly align block elements */
   /* styles 960 main content box */
   /* styles left content box */
@@ -101,13 +98,12 @@ body {
     line-height: 1.75; }
   body .main-box {
     box-sizing: border-box;
-    /*  width: $px-dsk-mainbox; */
     background-color: #ffffff;
     border-style: solid;
     border-width: 2px 2px 2px 2px;
     border-color: #cccccc;
-    margin-bottom: 10px;
-    /* padding: 5px 10px; */ }
+    margin-bottom: 20px;
+    padding: 20px; }
     body .main-box img {
       float: left;
       width: 90%;
@@ -128,36 +124,29 @@ body {
   body .image-container .caption-text {
     position: absolute;
     z-index: 2;
-    /* left: 1%; */
-    margin: 0 1 auto;
     margin-left: 2%;
     text-align: center;
     background-color: #4aaaa5;
-    width: 86.8%;
+    width: 86.2%;
     height: 15%;
     padding: 10px;
     font-size: 1.2em;
     color: white;
     font-weight: 200; }
   body .wrapper {
-    /*   padding-right: 10px;
-  padding-left: 10px; */
     padding: 0; }
   body .custom-footer {
     background-color: #666666;
     border-color: #4aaaa5;
     border-style: solid;
     color: white;
-    border-width: 10px 0px 0px 0px;
-    /* height: 80px; */ }
+    border-width: 10px 0px 0px 0px; }
     body .custom-footer p {
       text-align: center;
       font-size: 80%;
       line-height: 1;
       padding: 25px;
       margin: 0; }
-  body .c-my-sm-2 {
-    width: 25%; }
   body .contact-form ul {
     margin-bottom: 20px; }
   body .contact-form li {
@@ -188,34 +177,11 @@ body {
     background-color: #1D5959;
     text-shadow: 1px 1px #1AD7E5; }
 
-/**********************************************************
-   * css id definitions
-   */
-/* Box-model */
-/*
-@media only screen and (min-width: 680px) {
-  body {
-      background-color: $brand-footer-bg-color;
-  }
-  .main-content {
-    width: 400px;
-  }
-  .main-box {
-    width: 300px;
-    img {
-      width: 50%;
-      height: 60%;
-      float: left;
-      margin: 1% 1%;
-    }
-  }
-}
-*/
-/* For mobile phones: */
+/* For mobile phones portrait: */
 [class*="col-"] {
   width: 100%; }
 
-/* For small cell phone: */
+/* For cellphone screen portrait: */
 @media only screen and (max-width: 307px) {
   body {
     margin-top: 0px;
@@ -251,34 +217,72 @@ body {
       color: black;
       font-weight: 200; } }
 
+@media only screen and (max-width: 640px) {
+  /* column spacer for navigation bar */
+  .c-my-sm-2 {
+    width: 25%; } }
+
 /* For tablet: */
-@media only screen and (min-width: 640px) {
-  .col-1 {
+@media only screen and (min-width: 641px) and (max-width: 979px) {
+  /*   .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;} 
+  .col-12 {width: 100%;} */
+  .c-my-tblt-1 {
     width: 8.33%; }
-  .col-2 {
+  .c-my-tblt-2 {
     width: 16.66%; }
-  .col-3 {
+  .c-my-tblt-3 {
     width: 25%; }
-  .col-4 {
+  .c-my-tblt-4 {
     width: 33.33%; }
-  .col-5 {
+  .c-my-tblt-5 {
     width: 41.66%; }
-  .col-6 {
+  .c-my-tblt-6 {
     width: 50%; }
-  .col-7 {
+  .c-my-tblt-7 {
     width: 58.33%; }
-  .col-8 {
+  .c-my-tblt-8 {
     width: 66.66%; }
-  .col-9 {
+  .c-my-tblt-9 {
     width: 75%; }
-  .col-10 {
+  .c-my-tblt-10 {
     width: 83.33%; }
-  .col-11 {
+  .c-my-tblt-11 {
     width: 91.66%; }
-  .col-12 {
+  .c-my-tblt-12 {
     width: 100%; }
-  header nav a {
-    padding: 10px 40px 10px 20px; } }
+  [class*="c-my-tblt-"] {
+    float: left;
+    padding: 10px; }
+  body {
+    margin-top: 0px;
+    /* styles left content box */ }
+    body header {
+      margin-bottom: 20px; }
+      body header h1 {
+        margin-left: 5%;
+        padding: 5% 1% !important; }
+    body .main-box img {
+      float: left;
+      width: 55%;
+      height: 55%;
+      margin: 0% 5% 1% 5%; }
+    body .media-links {
+      background-color: #ffffff; }
+      body .media-links img {
+        float: left;
+        width: 20%;
+        height: 20%;
+        margin: 0% 2% 0% 0%; } }
 
 @media only screen and (min-width: 980px) {
   /* For desktop: */
@@ -305,100 +309,10 @@ body {
   .col-11 {
     width: 91.66%; }
   .col-12 {
-    width: 100%; } }
-
-/* background-image: url("../images/circles-light.png");
-  font-family: $brand-font-stack;
-  header 
-  {
-    border-style: solid;
-    border-width: 0px 0px 2px 0px;
-    border-color: $brand-border-color;
-    height: $brand-header-height;
-  }
-  h1,h2,h3,h4,h5,h6
-  {
-    font-family: $brand-font-header;
-  }
-  h2, h3 {
-    box-sizing: border-box;
-    width: 100%;
-    height: 7%;
-    padding: 0.5%; 
-    border-style: solid;
-    border-color: $brand-border-color;   
-    border-width: 0 0 2px 0;
-  }
-  p 
-  {
-    text-align: justify;
-    line-height: 1.75;
-    margin: 0 0 2px 0;
-  }
-  footer 
-  {
-    border: none;
-  }
-  .brand-custom 
-  {
-    background-color: $brand-header-bg-color;
-    padding: 0;
-  }
-  .brand-logo 
-  {
-    font-family: $brand-font-header;
-    font-size: 200%;
-    font-weight: bold;
-    color: #fff;
-    text-align: center;
-    background: $brand-color;
+    width: 100%; }
+  body {
     margin: 0;
-    padding: 2% 2%;
-  }
-  .row-spacer 
-  {
-    margin: 20px 0;
-  }
-  .card-body h2 
-  {
-      font-size: 1.5em;
-      font-weight: bold;
-  }
-  .card-body h2,h3,h4,h5,h6 
-  {
-    color: $brand-color;
-    line-height: 2;
-    font-family: 'Georgia', Times, Times New Roman, serif;
-   }
-   .custom-footer {
-      background-color: $brand-footer-bg-color;
-      border-color: $brand-color;
-      border-style: solid;
-      color: white;
-      border-width: 3px 0px 0px 0px;
-      height: 80px;
-      p
-      {
-        text-align: center;
-        font-size: 80%;
-        line-height: 1;
-        padding: 25px;
-        margin: 0;
-      }
-    }
-    .caption-vspacer {
-      top: 60%;
-    } */
-/* caption_text styles the "text over image" caption on top of each portfolio image */
-/*
-  .caption-text {
-      color: $brand-color;
-      font-weight: bold;
-      text-shadow: 1px 1px black;
-  }
-    #media_links {
-      position: relative;
-      left: 20px;
-      width: 200px;
-      background-color: #ffffff;
-    } */
+    background-color: green !important; }
+    body header nav a {
+      background-color: red;
+      padding: 10px 40px 10px 20px; } }
