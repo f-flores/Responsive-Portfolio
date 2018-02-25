@@ -130,9 +130,13 @@ body {
     text-align: center;
     background-color: #4aaaa5;
     width: 90%;
-    height: 15%;
+    height: 20%;
+    /* !important; */
+    top: 75%;
+    /* !important; */
     padding: 10px;
-    font-size: 1.2em;
+    font-size: 120%;
+    /* font-size: 1.2em; */
     color: white;
     font-weight: 200; }
   body .wrapper {
@@ -183,6 +187,10 @@ body {
 [class*="col-"] {
   width: 100%; }
 
+@media only screen and (min-width: 308px) and (max-width: 350px) {
+  .image-container .caption-text {
+    font-size: 80% !important; } }
+
 /* For cellphone screen portrait: */
 @media only screen and (max-width: 307px) {
   body {
@@ -215,9 +223,13 @@ body {
       background-color: transparent;
       width: 86.8%;
       height: 15%;
-      font-size: 1.2em;
+      font-size: 70% !important;
       color: black;
-      font-weight: 200; } }
+      font-weight: 200;
+      width: 86.5% !important;
+      height: 20% !important;
+      top: 5% !important;
+      line-height: 1 !important; } }
 
 @media only screen and (max-width: 640px) {
   /* column spacer for navigation bar */
@@ -279,12 +291,15 @@ body {
       margin: 1% 1% 1% 1%; }
     body .row-portfl-lm {
       margin-left: 5%; }
+    body figure {
+      font-size: 85%; }
     body figure > a > img {
       width: 100%;
       height: 100%; }
     body .image-container .caption-text {
       width: 90% !important;
-      height: 20% !important; } }
+      height: 20% !important;
+      top: 75% !important; } }
 
 @media only screen and (min-width: 980px) {
   /* For desktop: */
@@ -347,6 +362,6 @@ body {
       width: 100%;
       height: 100%; }
     body .image-container .caption-text {
-      width: 86.5% !important;
+      width: 84.8% !important;
       height: 20% !important;
-      top: 75% !important; } }
+      top: 73% !important; } }

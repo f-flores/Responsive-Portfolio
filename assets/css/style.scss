@@ -33,6 +33,7 @@ $smph-size: 640;
 $px-smph-size: $smph-size * 1px;
 
 // tablet (tblt) dimensions range
+$px-tblt-low: $px-smph-portrait-size + 1px;
 $px-tblt-min: $px-smph-size + 1px;
 $px-tblt-max: $px-dsk-size - 1px;
 
@@ -195,12 +196,12 @@ body
  }
  /* attributes for portfolio project content box */
  .image-container { 
-  position: relative; 
-  display: inline-block;
-  margin-left: 2px;
-  text-align: center;
-  width: 200;
-  height: 290;
+    position: relative; 
+    display: inline-block;
+    margin-left: 2px;
+    text-align: center;
+    width: 200;
+    height: 290;
  }
   /* caption_text styles the "text over image" caption on top of each portfolio image */
   .image-container .caption-text {
@@ -210,9 +211,11 @@ body
     text-align: center;
     background-color: $brand-color;
     width: 90%;
-    height: 15%;
+    height: 20%; /* !important; */
+    top: 75%; /* !important; */
     padding: 10px;
-    font-size: 1.2em;
+    font-size: 120%;
+   /* font-size: 1.2em; */
     color: white;
     font-weight: 200;
   }
@@ -233,8 +236,6 @@ body
       margin: 0;
     }
   }
-
-
 
   .contact-form ul {
     margin-bottom: 20px;
@@ -285,6 +286,16 @@ body
   width: 100%;
 }
 
+
+//---------------------------------------------------------------------
+// FONT SIZE for caption text
+@media only screen and (min-width: $px-tblt-low) and (max-width: 350px) {
+  .image-container .caption-text {
+    font-size: 80% !important;
+  }
+}
+
+
 //---------------------------------------------------------------------
 // SMARTPHONE PORTRAIT (approximate dimensions)
 //
@@ -325,9 +336,13 @@ body
       background-color: transparent;
       width: 86.8%;
       height: 15%;
-      font-size: 1.2em;
+      font-size: 70% !important;
       color: black;
       font-weight: 200;
+      width: 86.5% !important;
+      height: 20% !important;
+      top: 5% !important;
+      line-height: 1 !important;
     }
   }
 }
@@ -339,6 +354,8 @@ body
         width: 25%;
       }
 }
+
+
 
 //---------------------------------------------------------------------
 // TABLET LANDSCAPE
@@ -393,19 +410,24 @@ body
     .row-portfl-lm {
       margin-left: 5%;
     }
+    figure {
+      font-size: 85%;
+    }
     figure > a > img { 
       width: 100%;
       height: 100%;
-     }
-      /* caption_text styles the "text over image" caption on top of each portfolio image */
-      .image-container .caption-text {
-        width: 90% !important;
-        height: 20% !important;
-      }
+    }
+    /* caption_text styles the "text over image" caption on top of each portfolio image */
+    .image-container .caption-text {
+      width: 90% !important;
+      height: 20% !important;
+      top: 75% !important;
+    }
     
     //
   }
 }
+
 
 //---------------------------------------------------------------------
 // DESKTOP LANDSCAPE
@@ -467,13 +489,13 @@ body
     figure > a > img { 
       width: 100%;
       height: 100%;
-     }
-      /* caption_text styles the "text over image" caption on top of each portfolio image */
-      .image-container .caption-text {
-        width: 86.5% !important;
-        height: 20% !important;
-        top: 75% !important;
-      }
+    }
+    /* caption_text styles the "text over image" caption on top of each portfolio image */
+    .image-container .caption-text {
+      width: 84.8% !important;
+      height: 20% !important;
+      top: 73% !important;
+    }
 
   }
 }
